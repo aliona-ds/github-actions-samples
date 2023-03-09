@@ -97,7 +97,7 @@ jobs:
 
     - name: Get the GKE credentials so we can deploy to the cluster
       run: |
-        gcloud container clusters get-credentials autopilot-cluster-1 --region us-central1 --project githubactions-cicd-to-gke
+        gcloud container clusters get-credentials $GKE_CLUSTER --region $GKE_REGION --project $PROJECT_ID
     - name: Create namespace & set in Kustomize
       run: |
          namespacePresentBlue=`kubectl get ns | grep python-app-blue | wc -l`
