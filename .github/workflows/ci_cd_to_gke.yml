@@ -135,7 +135,6 @@ jobs:
       run: |
         kubectl apply -k k8s/ 
    
-   
     # DO SOME CHECKS HERE BEFORE COMMIT
     #- name: Deploy updated Kubernetes resources
     #  run: |
